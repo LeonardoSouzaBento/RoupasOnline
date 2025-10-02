@@ -1,0 +1,68 @@
+html, body {
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+:root {
+  /*Cores*/
+  --main-color: #a02741;
+  --main-color2: black;
+  --back-color: oklch(97% 0 0);
+
+  /*Fontes*/
+  --h-font: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--back-color);
+  width: 100%;
+  max-width: 1390px;
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+/*Títulos*/
+h1 {
+  font-family: var(--h-font);
+  cursor: default;
+}
+
+p{
+  cursor: default;
+}
+
+span {
+  user-select: none;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+/*classes com estilos base*/
+
+.div-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: white;
+  border-radius: 12px;
+}
