@@ -1,32 +1,21 @@
 import { createContext } from "react";
-
-/* Tipos*/
-export interface UserData {
-  name: string;
-  sex: string;
-  category: string;
-}
+import type { UserData } from "@src/types/types";
 
 /* Dados padrão */
-export const userCategories = ["male", "female", "child"];
-
 export const defaultUserData: UserData = {
   name: "",
-  sex: "male",
-  category: userCategories[0],
+  email: "",
+  sex: "",
+  position: "",
 };
 
 /* Contexto */
 export interface UserDataContextType {
   userData: UserData;
-  setUserData: (info: UserData) => void;
-  userCategory: string;
-  setUserCategory: (value: string) => void;
+  setUserData: React.Dispatch<React.SetStateAction<UserData>>;
 }
 
 export const UserDataContext = createContext<UserDataContextType>({
   userData: defaultUserData,
   setUserData: () => {},
-  userCategory: userCategories[0],
-  setUserCategory: () => {},
 });

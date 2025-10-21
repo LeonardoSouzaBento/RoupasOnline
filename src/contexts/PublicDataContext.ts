@@ -1,24 +1,10 @@
 import { createContext } from "react";
+import type { ShopInfo } from "@src/types/types";
+import { defaultShopInfo } from "@src/data/home/publicData";
 
-/* Tipos */
-export interface ShopInfo {
-  name: string;
-  address: string;
-  contact: string;
-}
-
-/* Dados padrão */
-export const defaultShopInfo: ShopInfo = {
-  name: "Minha Loja Online",
-  address:
-    "Rua Antonio Filomeno, 123, Nossa Senhora Do Carmo, Caém - BA, Brasil",
-  contact: "(34) 98412-5832",
-};
-
-/* Contexto */
 export interface PublicDataContextType {
   shopInfo: ShopInfo;
-  setShopInfo: (info: ShopInfo) => void;
+  setShopInfo: React.Dispatch<React.SetStateAction<ShopInfo>>;
 }
 
 export const PublicDataContext = createContext<PublicDataContextType>({

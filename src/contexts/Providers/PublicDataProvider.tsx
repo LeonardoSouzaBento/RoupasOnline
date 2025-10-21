@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { PublicDataContext, defaultShopInfo } from "@contexts/PublicDataContext";
+import { PublicDataContext } from "@contexts/PublicDataContext";
+import { defaultShopInfo } from "@src/data/home/publicData";
 import type { ProviderType } from "@localtypes/types";
-import type { ShopInfo } from "@contexts/PublicDataContext";
+import type { ShopInfo } from "@localtypes/types";
 
 
 export const PublicDataProvider: React.FC<ProviderType> = ({ children }) => {

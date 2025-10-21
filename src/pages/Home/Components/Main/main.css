@@ -1,28 +1,21 @@
 @import "tailwindcss";
-@import "../../../../styles.css";
+@import "../../../../index.css";
 
 @layer components {
   section {
     @apply w-full border-b-2 border-gray-300 pt-7 pb-10;
   }
+
   h1 {
-    @apply sm:text-center pl-4 sm:pl-0;
+    @apply sm:text-center;
   }
-  h2{
-    @apply pl-4 sm:pl-0;
-  }
+
   p {
     @apply font-p;
   }
-  img{
-    @apply font-p;
-  }
-}
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  img {
+    @apply font-p;
+    transition: order 0.5s ease height 0.2s ease width 0.2s ease;
+  }
 }
